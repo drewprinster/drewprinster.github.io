@@ -1,7 +1,7 @@
 ---
 title: "JAWS-X: Addressing Efficiency Bottlenecks of Conformal Prediction Under Standard and Feedback Covariate Shift"
 collection: publications
-permalink: /publication/2023-icml-jaws-x.md
+permalink: /publication/2023-icml-jaws-x
 excerpt: 'This work presents JAWS-X, a collection of methods for efficiently estimating predictive confidence intervals for black-box predictors under standard and feedback covariate shift. Our JAWS-X methods achieve distribution-free, finite-sample guarantees while flexibly balancing statistical and computational efficiency.'
 date: 2023
 venue: 'The Fortieth International Conference on Machine Learning (ICML)'
