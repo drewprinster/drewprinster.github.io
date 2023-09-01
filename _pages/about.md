@@ -11,5 +11,4 @@ I'm a second-year Computer Science PhD student at Johns Hopkins University worki
 
 Previously at Yale University, I completed my B.S. (with distinction) in computer science and mathematics and was a Yale Global Health Scholar. At Yale I contributed to global health volunteering and research with the nonprofit [Unite For Sight](https://uniteforsight.org/); to microbiome, mental health, and social-network research with Dr. Nicholas Christakis at the [Yale Human Nature Lab](https://humannaturelab.net/); and to statistical testing of metagenome alignments with Dr. Mark Gerstein in the [Gerstein Lab](http://www.gersteinlab.org/).
 
-Contact: 
-- drew [at] cs [dot] jhu [dot] edu
+Contact: drew [at] cs [dot] jhu [dot] edu
