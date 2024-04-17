@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Drew Prinster"
 title_separator          : "-"
 name                     : &name "Drew Prinster"
-description              : &description "Third-year PhD student in computer science at Johns Hopkins University focusing on trustworthy machine learning in healthcare."
+description              : &description "PhD student in computer science at Johns Hopkins University focusing on trustworthy machine learning in healthcare."
 url                      : https://drewprinster.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 #baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "drewprinster/drewprinster.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Drew Prinster"
   avatar           : "Prinster_profile2022.png"
-  bio              : "Second-year PhD student in computer science at Johns Hopkins, focusing on trustworthy machine learning in healthcare."
+  bio              : "PhD student in computer science at Johns Hopkins, focusing on trustworthy machine learning in healthcare."
   location         : "Baltimore, MD"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
