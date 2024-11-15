@@ -7,4 +7,4 @@ redirect_from:
   - /resume
 ---
 
-[Will be adding link to download CV here soon!)
+Will be adding link to download CV here soon!
