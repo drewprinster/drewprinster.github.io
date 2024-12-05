@@ -7,4 +7,4 @@ redirect_from:
   - /resume
 ---
 
-Will be adding link to download CV here soon!
+[Current CV](https://drewprinster.github.io/files/DREW_PRINSTER_CV_Nov2024.pdf)
