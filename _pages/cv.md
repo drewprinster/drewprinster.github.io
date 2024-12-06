@@ -7,4 +7,4 @@ redirect_from:
   - /resume
 ---
 
-[Current CV](https://drewprinster.github.io/files/DREW_PRINSTER_CV_Nov2024.pdf)
+[Current CV (last updated December 2024)](https://drewprinster.github.io/files/DREW_PRINSTER_CV_Dec2024.pdf)
