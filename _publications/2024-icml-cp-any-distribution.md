@@ -13,18 +13,17 @@ keywords:
   - AI Agents
   - Bioscience Application
 authors:
-  - Drew Prinster*
-  - Samuel Stanton*
-  - Suchi Saria
+  - Drew Prinster
+  - Samuel Stanton
   - Anqi Liu
-author_notes: '*Equal contribution'
+  - Suchi Saria
 venue: 'The International Conference on Machine Learning (ICML)'
 venue_short: 'ICML 2024'
 pub_type: 'Conference paper'
 paperurl: 'https://arxiv.org/abs/2405.06627'
 pdf: 'https://arxiv.org/pdf/2405.06627'
 code: 'https://github.com/drewprinster/conformal-mfcs'
-citation: 'Prinster, D.*, Stanton, S.*, Saria, S., & Liu, A. (2024). Conformal Validity Guarantees Exist for Any Data Distribution (and How to Find Them). In International Conference on Machine Learning. PMLR.'
+citation: 'Prinster, D., Stanton, S., Liu, A., & Saria, S.  (2024). Conformal Validity Guarantees Exist for Any Data Distribution (and How to Find Them). In International Conference on Machine Learning. PMLR.'
 bibtex: |
   @InProceedings{pmlr-v235-prinster24a,
     title = {Conformal Validity Guarantees Exist for Any Data Distribution (and How to Find Them)},

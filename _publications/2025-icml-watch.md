@@ -22,7 +22,7 @@ venue_short: 'ICML 2025'
 pub_type: 'Conference paper'
 paperurl: 'https://arxiv.org/abs/2505.04608'
 pdf: 'https://arxiv.org/pdf/2505.04608'
-# code: ''    # optional: link to a code repository
+code: 'https://github.com/aaronhan223/watch'
 citation: 'Prinster, D., Han, X., Liu, A., & Saria, S. (2025). WATCH: Adaptive monitoring for AI deployments via weighted-conformal martingales. International Conference on Machine Learning (ICML). arXiv preprint arXiv:2505.04608.'
 bibtex: |
   @InProceedings{pmlr-v267-prinster25a,

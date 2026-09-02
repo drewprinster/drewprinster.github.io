@@ -14,6 +14,9 @@
         <div class="article-metadata">
           {% include author-list.html publication=page %}
           <span class="article-date">{{ page.date | date: "%B, %Y" }}</span>
+          {%- if page.distinction %}
+          <span class="article-distinction">{{ page.distinction }}</span>
+          {%- endif %}
         </div>
 
         {% include publication-links.html publication=page %}
@@ -23,7 +26,7 @@
         {% if page.pub_type %}
           <div class="pub-row">
             <div class="pub-row-heading">Type</div>
-            <div>{{ page.pub_type }}</div>
+            <div>{{ page.pub_type }}{% if page.distinction %} ({{ page.distinction | downcase }}){% endif %}</div>
           </div>
         {% endif %}
 

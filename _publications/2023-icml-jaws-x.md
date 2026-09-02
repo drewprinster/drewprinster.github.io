@@ -18,7 +18,8 @@ authors:
   - Anqi Liu
 venue: 'The Fortieth International Conference on Machine Learning (ICML)'
 venue_short: 'ICML 2023'
-pub_type: 'Conference paper (oral presentation)'
+pub_type: 'Conference paper'
+distinction: 'Oral'
 paperurl: 'https://proceedings.mlr.press/v202/prinster23a.html'
 pdf: 'https://proceedings.mlr.press/v202/prinster23a/prinster23a.pdf'
 code: 'https://github.com/drewprinster/jaws-x'

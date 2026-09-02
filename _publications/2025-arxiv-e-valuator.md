@@ -24,7 +24,7 @@ venue_short: 'arXiv'
 pub_type: 'Preprint'
 paperurl: 'https://arxiv.org/abs/2512.03109'
 pdf: 'https://arxiv.org/pdf/2512.03109'
-# code: ''    # optional: link to a code repository
+code: 'https://github.com/shuvom-s/e-valuator'
 citation: 'Sadhuka, S., Prinster, D., Fannjiang, C., Scalia, G., Berger, B., Regev, A., & Wang, H. (2025). E-valuator: Reliable Agent Verifiers with Sequential Hypothesis Testing. arXiv preprint arXiv:2512.03109.'
 bibtex: |
   @article{sadhuka2025valuator,

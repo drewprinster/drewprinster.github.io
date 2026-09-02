@@ -21,6 +21,9 @@ Usage: {% include publication-card.html publication=post %}
         <span class="article-date">{{ pub.date | date: "%B, %Y" }}</span>
         <span class="middot-divider"></span>
         <span class="pub-publication">{{ pub.venue_short | default: pub.venue }}</span>
+        {%- if pub.distinction %}
+        <span class="article-distinction">{{ pub.distinction }}</span>
+        {%- endif %}
       </div>
 
       <div class="article-title">

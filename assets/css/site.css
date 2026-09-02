@@ -21,6 +21,9 @@
   --title-fg: #151515;
   --section-bg: #fff;
   --thumb-bg: #fafafa;
+  --distinction-fg: #8d5b00;
+  --distinction-bg: #fff8e1;
+  --distinction-border: #f0d38a;
   --navbar-height: 70px;
 }
 
@@ -43,6 +46,9 @@
   --title-fg: #fff;
   --section-bg: #1c1e26;
   --thumb-bg: #21232c;
+  --distinction-fg: #ffcf5c;
+  --distinction-bg: rgba(255, 207, 92, 0.12);
+  --distinction-border: rgba(255, 207, 92, 0.35);
 }
 
 /* --------------------------------------------------------------------------
@@ -571,6 +577,23 @@ img {
 
 .article-metadata .author-highlighted {
   font-weight: 700;
+}
+
+/* Spotlight / Oral marker. Deliberately unlike a keyword tag -- uppercase
+   and bold, so an honor does not read as just another topic label. */
+.article-distinction {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.16rem 0.4rem;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  vertical-align: 1px;
+  color: var(--distinction-fg);
+  background: var(--distinction-bg);
+  border: 1px solid var(--distinction-border);
 }
 
 .author-notes {

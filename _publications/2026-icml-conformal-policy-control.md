@@ -24,15 +24,16 @@ authors:
 venue: 'International Conference on Machine Learning (ICML)'
 venue_short: 'ICML 2026'
 pub_type: 'Conference paper'
+distinction: 'Spotlight'
 paperurl: 'https://arxiv.org/abs/2603.02196'
 pdf: 'https://arxiv.org/pdf/2603.02196'
 code: 'https://github.com/samuelstanton/conformal-policy-control'
 citation: 'Prinster, D., Fannjiang, C., Park, J. W., Cho, K., Liu, A., Saria, S., & Stanton, S. (2026). Conformal Policy Control. International Conference on Machine Learning (ICML). arXiv preprint arXiv:2603.02196.'
 bibtex: |
-  @article{prinster2026conformal,
-    title = {Conformal policy control},
-    author = {Prinster, Drew and Fannjiang, Clara and Park, Ji Won and Cho, Kyunghyun and Liu, Anqi and Saria, Suchi and Stanton, Samuel},
-    journal = {International Conference on Machine Learning (ICML)},
+  @inproceedings{prinster2026conformal,
+    title = {Conformal Policy Control},
+    author = {Prinster, Drew and Fannjiang, Clara and Park, Ji Won and Cho, Kyunghyun and Liu, Anqi and Saria, Suchi and Stanton, Samuel Don},
+    booktitle = {Forty-third International Conference on Machine Learning},
     year = {2026},
     url = {https://arxiv.org/abs/2603.02196}
   }
