@@ -3,6 +3,8 @@ title: "Conformal Policy Control"
 collection: publications
 permalink: /publication/2026-icml-conformal-policy-control
 date: 2026-07-01  # only the year and month are displayed
+topic: ai-control
+topic_order: 1
 authors:
   - Drew Prinster
   - Clara Fannjiang

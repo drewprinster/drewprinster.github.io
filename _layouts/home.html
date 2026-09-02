@@ -68,10 +68,7 @@
           </div>
 
           <div>
-            {% assign pubs = site.publications | sort: "date" | reverse %}
-            {% for post in pubs %}
-              {% include publication-card.html publication=post %}
-            {% endfor %}
+            {% include publication-groups.html %}
           </div>
         </div>
       </div>

@@ -1,0 +1,42 @@
+{%- comment -%}
+Renders every publication, grouped by topic per _data/topics.yml.
+
+Group order comes from that file; order within a group comes from each
+publication's `topic_order` (papers without one fall to the end of their
+group). Publications whose `topic` matches no group -- or which have none
+at all -- are collected under "Other", so a typo cannot silently drop a
+paper from the page.
+{%- endcomment -%}
+
+{%- comment -%} Slugs as an array: `contains` then matches whole elements, not substrings. {%- endcomment -%}
+{%- assign slug_string = "" -%}
+{%- for group in site.data.topics.groups -%}
+  {%- assign slug_string = slug_string | append: group.slug | append: "|" -%}
+{%- endfor -%}
+{%- assign slug_list = slug_string | split: "|" -%}
+
+{%- for group in site.data.topics.groups -%}
+  {%- assign docs = site.publications | where: "topic", group.slug | sort: "topic_order", "last" -%}
+  {%- if docs.size > 0 %}
+    <div class="pub-group">
+      <h2 class="pub-group-heading">{{ group.heading }}</h2>
+      {% for post in docs %}
+        {% include publication-card.html publication=post %}
+      {% endfor %}
+    </div>
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign by_date = site.publications | sort: "date" | reverse -%}
+{%- assign grouped = by_date | where_exp: "p", "slug_list contains p.topic" -%}
+{%- assign ungrouped_count = by_date.size | minus: grouped.size -%}
+{%- if ungrouped_count > 0 %}
+  <div class="pub-group">
+    <h2 class="pub-group-heading">Other</h2>
+    {% for post in by_date %}
+      {%- unless slug_list contains post.topic -%}
+        {% include publication-card.html publication=post %}
+      {%- endunless -%}
+    {% endfor %}
+  </div>
+{%- endif -%}

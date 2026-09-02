@@ -3,6 +3,8 @@ title: "Care to Explain? AI Explanation Types Differentially Impact Chest Radiog
 collection: publications
 permalink: /publication/2024-radiology-care-to-explain
 date: 2024-11-01  # only the year and month are displayed
+topic: human-ai-teaming
+topic_order: 1
 authors:
   - Drew Prinster
   - Amama Mahmood

@@ -14,10 +14,7 @@
         </div>
 
         {% if page.list_publications %}
-          {% assign pubs = site.publications | sort: "date" | reverse %}
-          {% for post in pubs %}
-            {% include publication-card.html publication=post %}
-          {% endfor %}
+          {% include publication-groups.html %}
         {% endif %}
 
         <div class="article-style">

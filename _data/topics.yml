@@ -1,0 +1,18 @@
+# Topic groups for the Publications section, in the order they appear.
+#
+# `slug` must match the `topic:` field in a publication's front matter.
+# Within a group, papers are ordered by their `topic_order` field (lowest
+# first); a paper with no `topic_order` falls to the end of its group.
+# A paper whose topic matches no group here still appears, under "Other".
+groups:
+  - slug: ai-control
+    heading: "AI Control: Safety Constraints for AI Agents"
+
+  - slug: ai-monitoring
+    heading: "AI Monitoring: Post-Deployment Safety Monitoring"
+
+  - slug: uq-shift
+    heading: "Uncertainty Quantification under Distribution Shift"
+
+  - slug: human-ai-teaming
+    heading: "Human-AI Teaming: Designing AI for Effective Collaboration"
