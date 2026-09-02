@@ -10,7 +10,8 @@ topic_order: 2
 keywords:
   - Conformal Prediction
   - Distribution Shift
-  - Uncertainty Quantification
+  - Efficient Uncertainty Quantification
+  - Bioscience Application
 authors:
   - Drew Prinster
   - Suchi Saria

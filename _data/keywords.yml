@@ -11,13 +11,18 @@
 # Keep the vocabulary small. Tags are for scanning at a glance, so a
 # handful of reused keywords is far more useful than one per paper.
 
+# Methods and problem settings: each gets its own color.
 "Conformal Prediction": blue
 "Distribution Shift": amber
-"Uncertainty Quantification": teal
+"Efficient Uncertainty Quantification": teal
 "AI Agents": purple
 "Safety Monitoring": green
 "Sequential Testing": indigo
 "Risk Control": rose
 "Human-AI Interaction": orange
-"Explainability": cyan
-"Healthcare": grey
+"Explainability/Interpretability": cyan
+
+# Application domains: deliberately both grey, so they read as a quieter
+# second category and do not add to the color load.
+"Healthcare Application": grey
+"Bioscience Application": grey

@@ -10,8 +10,8 @@ topic_order: 1
 keywords:
   - Safety Monitoring
   - Distribution Shift
-  - Conformal Prediction
   - Sequential Testing
+  - Conformal Prediction
 authors:
   - Drew Prinster
   - Xing Han

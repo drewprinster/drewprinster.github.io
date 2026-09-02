@@ -10,7 +10,7 @@ topic_order: 3
 keywords:
   - Conformal Prediction
   - Distribution Shift
-  - Uncertainty Quantification
+  - Efficient Uncertainty Quantification
 authors:
   - Drew Prinster
   - Anqi Liu

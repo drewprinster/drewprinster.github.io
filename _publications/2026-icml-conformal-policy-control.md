@@ -10,6 +10,9 @@ keywords:
   - AI Agents
   - Risk Control
   - Conformal Prediction
+  - Distribution Shift
+  - Healthcare Application
+  - Bioscience Application
 authors:
   - Drew Prinster
   - Clara Fannjiang

@@ -8,8 +8,8 @@ topic_order: 1
 # thumbnail: /images/publications/FILENAME.png   # optional; see images/publications/README.md
 keywords:
   - Human-AI Interaction
-  - Explainability
-  - Healthcare
+  - Explainability/Interpretability
+  - Healthcare Application
 authors:
   - Drew Prinster
   - Amama Mahmood
