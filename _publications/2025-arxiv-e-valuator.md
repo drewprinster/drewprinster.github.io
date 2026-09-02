@@ -26,5 +26,13 @@ paperurl: 'https://arxiv.org/abs/2512.03109'
 pdf: 'https://arxiv.org/pdf/2512.03109'
 # code: ''    # optional: link to a code repository
 citation: 'Sadhuka, S., Prinster, D., Fannjiang, C., Scalia, G., Berger, B., Regev, A., & Wang, H. (2025). E-valuator: Reliable Agent Verifiers with Sequential Hypothesis Testing. arXiv preprint arXiv:2512.03109.'
+bibtex: |
+  @article{sadhuka2025valuator,
+    title = {E-valuator: Reliable agent verifiers with sequential hypothesis testing},
+    author = {Sadhuka, Shuvom and Prinster, Drew and Fannjiang, Clara and Scalia, Gabriele and Berger, Bonnie and Regev, Aviv and Wang, Hanchen},
+    journal = {arXiv preprint arXiv:2512.03109},
+    year = {2025},
+    url = {https://arxiv.org/abs/2512.03109}
+  }
 ---
 Converts verifier scores into decision rules with statistical guarantees by framing trajectory evaluation as a sequential hypothesis testing problem over e-processes, which enables continuous monitoring of agent actions. Improves false alarm control and statistical power across several datasets while allowing early termination of unsuccessful trajectories to conserve computation.

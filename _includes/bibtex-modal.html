@@ -1,0 +1,19 @@
+{%- comment -%}
+Single dialog reused by every BibTeX button on the page. Populated from the
+clicked button's sibling .bibtex-source by assets/js/site.js.
+{%- endcomment -%}
+<div class="cite-modal" id="cite-modal" hidden>
+  <div class="cite-modal__backdrop" data-cite-close></div>
+  <div class="cite-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="cite-modal-title">
+    <div class="cite-modal__header">
+      <h2 class="cite-modal__title" id="cite-modal-title">BibTeX</h2>
+      <button type="button" class="cite-modal__close" data-cite-close aria-label="Close">&times;</button>
+    </div>
+    <p class="cite-modal__paper" id="cite-modal-paper"></p>
+    <pre class="cite-modal__code" id="cite-modal-code" tabindex="0"></pre>
+    <div class="cite-modal__actions">
+      <button type="button" class="btn btn-outline-primary" id="cite-copy">Copy</button>
+      <span class="cite-modal__status" id="cite-status" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</div>

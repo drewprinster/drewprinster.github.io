@@ -647,6 +647,106 @@ img {
 }
 
 /* --------------------------------------------------------------------------
+   BibTeX dialog
+   -------------------------------------------------------------------------- */
+
+/* Explicit, so the [hidden] attribute is not overridden by display:flex */
+.cite-modal[hidden] {
+  display: none;
+}
+
+.cite-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.cite-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cite-modal__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  padding: 1.1rem 1.25rem 1.25rem;
+}
+
+.cite-modal__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cite-modal__title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.cite-modal__close {
+  background: none;
+  border: 0;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 0 0.2rem;
+  cursor: pointer;
+  color: var(--muted-fg);
+}
+
+.cite-modal__close:hover {
+  color: var(--primary);
+}
+
+.cite-modal__paper {
+  margin: 0.35rem 0 0.85rem;
+  font-size: 0.85rem;
+  color: var(--muted-fg);
+}
+
+.cite-modal__code {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  background: var(--thumb-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  /* Long BibTeX fields scroll here rather than widening the dialog */
+  overflow-x: auto;
+  white-space: pre;
+  color: var(--body-fg);
+}
+
+.cite-modal__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+}
+
+.cite-modal__actions .btn {
+  padding: 0.4rem 0.9rem;
+}
+
+.cite-modal__status {
+  font-size: 0.85rem;
+  color: var(--muted-fg);
+}
+
+/* --------------------------------------------------------------------------
    Single-page article (publication detail / simple pages)
    -------------------------------------------------------------------------- */
 

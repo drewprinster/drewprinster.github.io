@@ -28,4 +28,13 @@ actual PDF, so a paper whose only link is a publisher landing page gets a
   {%- if pub.video %}
   <a class="btn btn-outline-primary" href="{{ pub.video }}" target="_blank" rel="noopener">Video</a>
   {%- endif -%}
+  {%- if pub.bibtex %}
+  <button type="button" class="btn btn-outline-primary js-bibtex">BibTeX</button>
+  {%- comment -%}
+  The entry travels with the button rather than being fetched, so the
+  dialog works with no network round-trip. Kept in a hidden <pre> so
+  whitespace survives exactly as written.
+  {%- endcomment -%}
+  <pre class="bibtex-source" hidden data-paper="{{ pub.title | strip_html | escape }}">{{ pub.bibtex | escape }}</pre>
+  {%- endif -%}
 </div>

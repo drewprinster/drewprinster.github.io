@@ -63,6 +63,71 @@
     });
   }
 
+  /* ---- BibTeX dialog ---- */
+  var citeModal = document.getElementById('cite-modal');
+
+  if (citeModal) {
+    var citeCode = document.getElementById('cite-modal-code');
+    var citePaper = document.getElementById('cite-modal-paper');
+    var citeStatus = document.getElementById('cite-status');
+    var citeCopy = document.getElementById('cite-copy');
+    var lastFocused = null;
+
+    function openCite(source) {
+      citeCode.textContent = source.textContent.trim();
+      citePaper.textContent = source.getAttribute('data-paper') || '';
+      citeStatus.textContent = '';
+      lastFocused = document.activeElement;
+      citeModal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      citeCopy.focus();
+    }
+
+    function closeCite() {
+      citeModal.hidden = true;
+      document.body.style.overflow = '';
+      if (lastFocused && lastFocused.focus) lastFocused.focus();
+    }
+
+    document.addEventListener('click', function (e) {
+      var trigger = e.target.closest('.js-bibtex');
+      if (trigger) {
+        // The hidden <pre> sits next to the button inside .btn-links.
+        var source = trigger.parentNode.querySelector('.bibtex-source');
+        if (source) openCite(source);
+        return;
+      }
+      if (e.target.closest('[data-cite-close]')) closeCite();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !citeModal.hidden) closeCite();
+    });
+
+    citeCopy.addEventListener('click', function () {
+      var text = citeCode.textContent;
+
+      function selectInstead() {
+        // Clipboard unavailable (older browser, or a non-secure context):
+        // select the entry so the reader can copy it by hand.
+        var range = document.createRange();
+        range.selectNodeContents(citeCode);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        citeStatus.textContent = 'Press Ctrl/Cmd+C to copy';
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          citeStatus.textContent = 'Copied';
+        }, selectInstead);
+      } else {
+        selectInstead();
+      }
+    });
+  }
+
   /* ---- Highlight the nav link for the section currently in view ----
      Picks the last section whose top has scrolled past just below the navbar,
      so the topmost section stays active at scroll position 0. */
