@@ -6,14 +6,14 @@
 # nothing breaks if you add a tag and forget to assign a color.
 #
 # Available colors: blue, indigo, purple, teal, green, amber, orange,
-#                   rose, cyan, grey
+#                   rose, cyan, tan, grey
 #
 # Keep the vocabulary small. Tags are for scanning at a glance, so a
 # handful of reused keywords is far more useful than one per paper.
 
 # Methods and problem settings: each gets its own color.
 "Conformal Prediction": blue
-"Distribution Shift": amber
+"Distribution Shift": tan
 "Efficient Uncertainty Quantification": teal
 "AI Agents": purple
 "Safety Monitoring": green

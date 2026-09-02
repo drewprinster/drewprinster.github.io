@@ -6,7 +6,7 @@ excerpt: 'JAWS is a collection of wrapper methods for distribution-free predicti
 date: 2022-11-01  # only the year and month are displayed
 topic: uq-shift
 topic_order: 3
-# thumbnail: /images/publications/FILENAME.png   # optional; see images/publications/README.md
+thumbnail: /images/publications/jaws_thumbnail.png
 keywords:
   - Conformal Prediction
   - Distribution Shift

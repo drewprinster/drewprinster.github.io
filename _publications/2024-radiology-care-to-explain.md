@@ -5,7 +5,7 @@ permalink: /publication/2024-radiology-care-to-explain
 date: 2024-11-01  # only the year and month are displayed
 topic: human-ai-teaming
 topic_order: 1
-# thumbnail: /images/publications/FILENAME.png   # optional; see images/publications/README.md
+thumbnail: /images/publications/CareToExplain_thumbnail.png
 keywords:
   - Human-AI Interaction
   - Explainability/Interpretability

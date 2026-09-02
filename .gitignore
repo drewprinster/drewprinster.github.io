@@ -1,2 +1,5 @@
 _site/
 
+
+# Full-size thumbnail sources (kept locally; git keeps blobs forever)
+images/publications/_originals/

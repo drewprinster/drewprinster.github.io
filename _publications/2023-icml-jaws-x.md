@@ -6,7 +6,7 @@ excerpt: 'Accepted for an Oral Presentation at ICML 2023 (top ~2% of submissions
 date: 2023-07-01  # only the year and month are displayed
 topic: uq-shift
 topic_order: 2
-# thumbnail: /images/publications/FILENAME.png   # optional; see images/publications/README.md
+thumbnail: /images/publications/jaws-x_thumbnail.png
 keywords:
   - Conformal Prediction
   - Distribution Shift

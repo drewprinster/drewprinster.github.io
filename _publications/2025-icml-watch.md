@@ -6,7 +6,7 @@ excerpt: 'Paper at ICML 2025. This paper develops a framework for the continual 
 date: 2025-07-01  # only the year and month are displayed
 topic: ai-monitoring
 topic_order: 1
-# thumbnail: /images/publications/FILENAME.png   # optional; see images/publications/README.md
+thumbnail: /images/publications/watch_full_thumbnail.png
 keywords:
   - Safety Monitoring
   - Distribution Shift

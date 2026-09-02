@@ -5,7 +5,7 @@ permalink: /publication/2025-arxiv-e-valuator
 date: 2025-12-01  # only the year and month are displayed
 topic: ai-monitoring
 topic_order: 2
-# thumbnail: /images/publications/FILENAME.png   # optional; see images/publications/README.md
+thumbnail: /images/publications/e-valuator_thumbnail.png
 keywords:
   - AI Agents
   - Safety Monitoring
