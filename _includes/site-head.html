@@ -33,7 +33,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
 
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+{%- comment -%}
+Named site.css, not style.css: the github-pages gem loads jekyll-theme-primer
+by default, whose assets/css/style.scss compiles to the same destination and
+overwrites a site file at that path on incremental regeneration.
+{%- endcomment -%}
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 
 <!-- Restore the saved theme before first paint to avoid a flash of the wrong theme -->
 <script>

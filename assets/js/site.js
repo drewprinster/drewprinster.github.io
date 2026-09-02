@@ -82,7 +82,10 @@
       });
 
       // At the very bottom, activate the last section even if it is short.
-      if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2) {
+      // Only when the page actually scrolls: on a viewport taller than the
+      // page this condition is always true and would pin the last section.
+      var scrollable = document.body.offsetHeight > window.innerHeight + 4;
+      if (scrollable && window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2) {
         current = sections[sections.length - 1];
       }
 
