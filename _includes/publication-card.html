@@ -1,19 +1,42 @@
 {%- comment -%}
 One publication entry, as shown in the Publications list.
+
+`thumbnail` and `keywords` are both optional: a paper without a thumbnail
+renders full width, and a paper without keywords simply shows no tags.
 Usage: {% include publication-card.html publication=post %}
 {%- endcomment -%}
 {%- assign pub = include.publication -%}
 <div class="card-simple view-card">
-  <div class="article-metadata">
-    {% include author-list.html publication=pub %}
-    <span class="article-date">{{ pub.date | date: "%B, %Y" }}</span>
-    <span class="middot-divider"></span>
-    <span class="pub-publication">{{ pub.venue_short | default: pub.venue }}</span>
-  </div>
+  <div class="card-layout">
+    {%- if pub.thumbnail %}
+    <a class="card-thumb" href="{{ pub.url | relative_url }}" tabindex="-1" aria-hidden="true">
+      <img src="{{ pub.thumbnail | relative_url }}"
+           alt="{{ pub.thumbnail_alt | default: '' }}" loading="lazy">
+    </a>
+    {%- endif %}
 
-  <div class="article-title">
-    <a href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
-  </div>
+    <div class="card-main">
+      <div class="article-metadata">
+        {% include author-list.html publication=pub %}
+        <span class="article-date">{{ pub.date | date: "%B, %Y" }}</span>
+        <span class="middot-divider"></span>
+        <span class="pub-publication">{{ pub.venue_short | default: pub.venue }}</span>
+      </div>
 
-  {% include publication-links.html publication=pub %}
+      <div class="article-title">
+        <a href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
+      </div>
+
+      {%- if pub.keywords and pub.keywords.size > 0 %}
+      <ul class="tag-list">
+        {%- for keyword in pub.keywords -%}
+          {%- assign color = site.data.keywords[keyword] | default: "grey" -%}
+          <li class="tag tag--{{ color }}">{{ keyword }}</li>
+        {%- endfor -%}
+      </ul>
+      {%- endif %}
+
+      {% include publication-links.html publication=pub %}
+    </div>
+  </div>
 </div>

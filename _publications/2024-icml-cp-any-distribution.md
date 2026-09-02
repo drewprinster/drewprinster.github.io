@@ -6,6 +6,11 @@ excerpt: 'Paper at ICML 2024. Demonstrates how conformal prediction can theoreti
 date: 2024-07-01  # only the year and month are displayed
 topic: uq-shift
 topic_order: 1
+# thumbnail: /images/publications/FILENAME.png   # optional; see images/publications/README.md
+keywords:
+  - Conformal Prediction
+  - Distribution Shift
+  - AI Agents
 authors:
   - Drew Prinster*
   - Samuel Stanton*

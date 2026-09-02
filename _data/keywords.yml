@@ -1,0 +1,23 @@
+# Keyword tags and their colors.
+#
+# Each entry maps a keyword, exactly as written in a publication's
+# `keywords:` list, to one of the palette colors below. A keyword used in a
+# paper but missing here still renders -- it just falls back to grey -- so
+# nothing breaks if you add a tag and forget to assign a color.
+#
+# Available colors: blue, indigo, purple, teal, green, amber, orange,
+#                   rose, cyan, grey
+#
+# Keep the vocabulary small. Tags are for scanning at a glance, so a
+# handful of reused keywords is far more useful than one per paper.
+
+"Conformal Prediction": blue
+"Distribution Shift": amber
+"Uncertainty Quantification": teal
+"AI Agents": purple
+"Safety Monitoring": green
+"Sequential Testing": indigo
+"Risk Control": rose
+"Human-AI Interaction": orange
+"Explainability": cyan
+"Healthcare": grey
