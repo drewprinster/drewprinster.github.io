@@ -1,0 +1,27 @@
+{%- comment -%}
+Link buttons for a publication. Any field left blank in the front matter is
+simply skipped, so it is safe to leave placeholders empty.
+Usage: {% include publication-links.html publication=post %}
+{%- endcomment -%}
+{%- assign pub = include.publication -%}
+{%- assign pdf = pub.pdf | default: pub.paperurl -%}
+<div class="btn-links">
+  {%- if pdf %}
+  <a class="btn btn-outline-primary" href="{{ pdf }}" target="_blank" rel="noopener">PDF</a>
+  {%- endif -%}
+  {%- if pub.paperurl and pub.pdf %}
+  <a class="btn btn-outline-primary" href="{{ pub.paperurl }}" target="_blank" rel="noopener">Link</a>
+  {%- endif -%}
+  {%- if pub.code %}
+  <a class="btn btn-outline-primary" href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>
+  {%- endif -%}
+  {%- if pub.slides %}
+  <a class="btn btn-outline-primary" href="{{ pub.slides }}" target="_blank" rel="noopener">Slides</a>
+  {%- endif -%}
+  {%- if pub.poster %}
+  <a class="btn btn-outline-primary" href="{{ pub.poster }}" target="_blank" rel="noopener">Poster</a>
+  {%- endif -%}
+  {%- if pub.video %}
+  <a class="btn btn-outline-primary" href="{{ pub.video }}" target="_blank" rel="noopener">Video</a>
+  {%- endif -%}
+</div>

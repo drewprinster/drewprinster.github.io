@@ -1,0 +1,19 @@
+{%- comment -%}
+One publication entry, as shown in the Publications list.
+Usage: {% include publication-card.html publication=post %}
+{%- endcomment -%}
+{%- assign pub = include.publication -%}
+<div class="card-simple view-card">
+  <div class="article-metadata">
+    {% include author-list.html publication=pub %}
+    <span class="article-date">{{ pub.date | date: "%B, %Y" }}</span>
+    <span class="middot-divider"></span>
+    <span class="pub-publication">{{ pub.venue_short | default: pub.venue }}</span>
+  </div>
+
+  <div class="article-title">
+    <a href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
+  </div>
+
+  {% include publication-links.html publication=pub %}
+</div>

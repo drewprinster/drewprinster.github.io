@@ -1,11 +1,13 @@
-# main links links
+# Top navigation bar.
+# `url` may be a site path (/#about), a file (/files/....pdf), or an
+# external link. Set `new_tab: true` to open the link in a new tab.
 main:
-    
-  - title: "Selected publications"
-    url: /publications/
+  - title: "About"
+    url: /#about
+
+  - title: "Publications"
+    url: /#publications
 
   - title: "CV"
-    url: https://drewprinster.github.io/files/DREW_PRINSTER_CV_Dec2024.pdf
-
-  - title: "Contact"
-    url: /contact/
+    url: /files/DREW_PRINSTER_CV_Dec2024.pdf
+    new_tab: true

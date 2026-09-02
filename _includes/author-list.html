@@ -1,0 +1,24 @@
+{%- comment -%}
+Renders a publication's author list, bolding the site owner.
+Matching is by substring so an equal-contribution marker (e.g. "Drew Prinster*")
+still highlights correctly. Falls back to the `citation` string if no
+structured `authors` list is present.
+Usage: {% include author-list.html publication=post %}
+{%- endcomment -%}
+{%- assign me = site.data.profile.name | default: site.name -%}
+{%- assign pub = include.publication -%}
+{%- if pub.authors and pub.authors.size > 0 -%}
+  <div>
+    {%- for author in pub.authors -%}
+      {%- if author contains me -%}
+        <span class="author-highlighted">{{ author }}</span>
+      {%- else -%}
+        <span>{{ author }}</span>
+      {%- endif -%}
+      {%- unless forloop.last %}, {% endunless -%}
+    {%- endfor -%}
+  </div>
+  {%- if pub.author_notes %}
+    <span class="author-notes">{{ pub.author_notes }}</span>
+  {%- endif -%}
+{%- endif -%}

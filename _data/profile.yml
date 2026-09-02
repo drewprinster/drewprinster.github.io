@@ -1,0 +1,32 @@
+# Profile card shown in the About section of the homepage.
+# Edit this file to change your name, photo, and social links.
+
+name: "Drew Prinster"
+
+# Optional subtitle lines under your name. Left blank to match the reference
+# layout, which shows the name only. Fill either in to have it appear.
+role: ""          # e.g. "PhD Student in Computer Science"
+affiliation: ""   # e.g. "Johns Hopkins University"
+
+avatar: "/images/Prinster_profile2022.png"
+
+# Set an address here to add a mail icon to the row of social icons.
+# Left blank because the bio already ends with your contact address.
+email: ""
+
+# Social icons. Any entry with an empty `url` is skipped, so it is safe to
+# leave the placeholders below until you have the links.
+# Icon names: Font Awesome (`fab fa-*`, `fas fa-*`) or Academicons (`ai ai-*`).
+links:
+  - label: "Google Scholar"
+    icon: "ai ai-google-scholar"
+    url: ""  # TODO: add your Google Scholar profile URL
+  - label: "GitHub"
+    icon: "fab fa-github"
+    url: "https://github.com/drewprinster"
+  - label: "LinkedIn"
+    icon: "fab fa-linkedin"
+    url: ""  # TODO: add your LinkedIn profile URL
+  - label: "Twitter"
+    icon: "fab fa-twitter"
+    url: "https://twitter.com/DrewPrinster"

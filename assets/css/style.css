@@ -1,0 +1,611 @@
+/* ==========================================================================
+   Site styles — single-page academic layout.
+   Design modeled on the Wowchemy "Minimal" academic layout.
+   Hand-written CSS (no Bootstrap): tokens up top, then layout, then widgets.
+   ========================================================================== */
+
+:root {
+  --primary: #1565c0;
+  --primary-hover: #0d417b;
+  --body-fg: rgba(0, 0, 0, 0.8);
+  --body-bg: #fff;
+  --heading-fg: #313131;
+  --muted-fg: rgba(0, 0, 0, 0.54);
+  --card-bg: #fff;
+  --card-border: rgba(0, 0, 0, 0.09);
+  --card-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  --navbar-bg: #fff;
+  --navbar-fg: #34495e;
+  --navbar-brand-fg: #2b2b2b;
+  --navbar-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.11);
+  --title-fg: #151515;
+  --section-bg: #fff;
+  --navbar-height: 70px;
+}
+
+[data-theme="dark"] {
+  /* Lighter than the reference's #2962ff, which only reaches ~3.3:1 contrast
+     on this background; #90caf9 clears WCAG AA for body text. */
+  --primary: #90caf9;
+  --primary-hover: #bbdefb;
+  --body-fg: rgba(255, 255, 255, 0.7);
+  --body-bg: #1c1e26;
+  --heading-fg: #fff;
+  --muted-fg: rgba(255, 255, 255, 0.54);
+  --card-bg: #282a36;
+  --card-border: #44475a;
+  --card-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  --navbar-bg: #23252f;
+  --navbar-fg: rgba(255, 255, 255, 0.8);
+  --navbar-brand-fg: #fff;
+  --navbar-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+  --title-fg: #fff;
+  --section-bg: #1c1e26;
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 13.86px;
+  line-height: 1.65;
+  color: var(--body-fg);
+  scroll-padding-top: var(--navbar-height);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--body-bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat, Roboto, sans-serif;
+  font-weight: 400;
+  margin: 1rem 0 0.5rem;
+  line-height: 1.25;
+  color: var(--heading-fg);
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+pre,
+code {
+  font-family: "Roboto Mono", SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Layout primitives
+   -------------------------------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.page-body {
+  flex-grow: 1;
+}
+
+/* Two-column section grid: narrow heading/profile rail + wide content.
+   Mirrors the reference layout's 4/8 split at the lg breakpoint. */
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .section-grid {
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Navbar
+   -------------------------------------------------------------------------- */
+
+.header--fixed {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.navbar {
+  height: var(--navbar-height);
+  background: var(--navbar-bg);
+  box-shadow: var(--navbar-shadow);
+  font-size: 13.86px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.navbar > .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  font-family: Montserrat, Roboto, sans-serif;
+  color: var(--navbar-brand-fg);
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+
+.navbar-brand:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-nav .nav-link {
+  display: block;
+  padding: 10px 15px;
+  color: var(--navbar-fg);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-icons {
+  margin-left: auto;
+}
+
+/* Mobile menu toggle */
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 1.15rem;
+  color: var(--navbar-fg);
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  margin-left: auto;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    background: var(--navbar-bg);
+    box-shadow: var(--navbar-shadow);
+    padding: 0.5rem 15px 1rem;
+  }
+
+  .navbar-collapse.is-open {
+    display: block;
+  }
+
+  .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-icons {
+    margin-left: 0;
+  }
+}
+
+/* Theme switcher dropdown */
+.theme-dropdown {
+  position: relative;
+}
+
+.theme-toggle {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 10px 15px;
+  color: var(--navbar-fg);
+  font-size: 1rem;
+}
+
+.theme-toggle:hover {
+  color: var(--primary);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  min-width: 8rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 0.3rem 0;
+  z-index: 20;
+}
+
+.dropdown-menu.is-open {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 0.35rem 1rem;
+  color: var(--body-fg);
+  cursor: pointer;
+  font-size: 13.86px;
+  font-family: inherit;
+}
+
+.dropdown-item:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Home sections
+   -------------------------------------------------------------------------- */
+
+.home-section {
+  background: var(--section-bg);
+  position: relative;
+  padding: 110px 0;
+  z-index: 0;
+}
+
+/* Alternate section shading, as in the reference layout. */
+.home-section:nth-of-type(even) {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="dark"] .home-section:nth-of-type(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 991px) {
+  .home-section {
+    padding: 60px 0;
+  }
+
+  .home-section:first-of-type {
+    padding-top: calc(var(--navbar-height) + 30px);
+  }
+}
+
+.section-heading h1 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.section-heading p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--muted-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Profile card (about section rail)
+   -------------------------------------------------------------------------- */
+
+#profile {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  #profile {
+    position: sticky;
+    top: calc(var(--navbar-height) + 20px);
+  }
+}
+
+.portrait-title h2 {
+  font-size: 1.75em;
+  font-weight: 300;
+  color: var(--heading-fg);
+  margin: 20px 0 10px;
+}
+
+.portrait-title h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--muted-fg);
+  margin: 0 0 10px;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar-circle {
+  border-radius: 50%;
+}
+
+.network-icon {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 0;
+}
+
+.network-icon li {
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.network-icon li:last-of-type {
+  margin-right: 0;
+}
+
+.network-icon li:hover {
+  transform: scale(1.2);
+}
+
+.network-icon a {
+  color: var(--muted-fg);
+}
+
+.network-icon a:hover {
+  color: var(--primary);
+}
+
+.big-icon {
+  font-size: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Prose
+   -------------------------------------------------------------------------- */
+
+.article-style {
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.article-style p:first-child {
+  margin-top: 0;
+}
+
+.article-style ul,
+.article-style ol {
+  padding-left: 1.4rem;
+}
+
+.article-style li {
+  margin-bottom: 0.4rem;
+}
+
+/* --------------------------------------------------------------------------
+   Publication cards
+   -------------------------------------------------------------------------- */
+
+.card-simple {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  margin-top: 20px;
+  padding: 15px 20px;
+}
+
+.card-simple:first-of-type {
+  margin-top: 0;
+}
+
+.article-metadata {
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--muted-fg);
+}
+
+.article-metadata a {
+  color: var(--muted-fg);
+}
+
+.article-metadata a:hover {
+  color: var(--primary);
+}
+
+.article-metadata .author-highlighted {
+  font-weight: 700;
+}
+
+.author-notes {
+  display: block;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--muted-fg);
+  margin-top: 2px;
+}
+
+.middot-divider {
+  padding-right: 0.45em;
+  padding-left: 0.45em;
+  font-size: 15px;
+}
+
+.middot-divider::after {
+  content: "\00B7";
+}
+
+.article-title {
+  font-size: 1.2rem;
+  font-family: Montserrat, Roboto, sans-serif;
+  line-height: 1.35;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.article-title a {
+  color: var(--title-fg);
+  transition: color 0.6s ease;
+}
+
+.article-title a:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.card-simple .article-style {
+  margin-top: 0.5rem;
+}
+
+/* Link buttons */
+.btn-links {
+  padding-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 13.86px;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-links .btn {
+  padding: 5px 0.5rem;
+  line-height: 1;
+  margin: 0 0.25rem 0.25rem 0;
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Single-page article (publication detail / simple pages)
+   -------------------------------------------------------------------------- */
+
+.article-container {
+  max-width: 760px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.article-container.wide {
+  max-width: 960px;
+}
+
+.pub {
+  padding-top: calc(var(--navbar-height) + 30px);
+  padding-bottom: 60px;
+}
+
+.pub h1,
+.page-title h1 {
+  font-size: 1.75rem;
+  margin-top: 0;
+}
+
+.pub-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .pub-row {
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+  }
+}
+
+.pub-row-heading {
+  font-weight: 700;
+}
+
+.space-below {
+  margin-bottom: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.page-footer {
+  padding: 2rem 0;
+}
+
+.site-footer {
+  color: var(--muted-fg);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}

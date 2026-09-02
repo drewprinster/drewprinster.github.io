@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="{{ site.locale | slice: 0, 2 | default: 'en' }}">
+<head>
+  {% include site-head.html %}
+</head>
+<body id="top" class="page-wrapper">
+  {% include site-nav.html %}
+
+  <div class="page-body">
+    <div class="pub">
+      <div class="article-container">
+        <h1>{{ page.title }}</h1>
+
+        <div class="article-metadata">
+          {% include author-list.html publication=page %}
+          <span class="article-date">{{ page.date | date: "%B, %Y" }}</span>
+        </div>
+
+        {% include publication-links.html publication=page %}
+      </div>
+
+      <div class="article-container space-below">
+        {% if page.pub_type %}
+          <div class="pub-row">
+            <div class="pub-row-heading">Type</div>
+            <div>{{ page.pub_type }}</div>
+          </div>
+        {% endif %}
+
+        {% if page.venue %}
+          <div class="pub-row">
+            <div class="pub-row-heading">Publication</div>
+            <div>{{ page.venue }}</div>
+          </div>
+        {% endif %}
+
+        {% if page.citation %}
+          <div class="pub-row">
+            <div class="pub-row-heading">Citation</div>
+            <div>{{ page.citation }}</div>
+          </div>
+        {% endif %}
+
+        <div class="article-style">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include site-footer.html %}
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="{{ site.locale | slice: 0, 2 | default: 'en' }}">
+<head>
+  {% include site-head.html %}
+</head>
+<body id="top" class="page-wrapper">
+  {% include site-nav.html %}
+
+  <div class="page-body">
+    {%- assign profile = site.data.profile -%}
+
+    <!-- ============================ About ============================ -->
+    <section id="about" class="home-section wg-about">
+      <div class="container">
+        <div class="section-grid">
+          <div>
+            <div id="profile">
+              <div class="portrait-title">
+                <h2>{{ profile.name | default: site.name }}</h2>
+                {% if profile.role and profile.role != "" %}<h3>{{ profile.role }}</h3>{% endif %}
+                {% if profile.affiliation and profile.affiliation != "" %}<h3>{{ profile.affiliation }}</h3>{% endif %}
+              </div>
+
+              {% if profile.avatar %}
+                <img class="avatar avatar-circle" width="200" height="200"
+                     src="{{ profile.avatar | relative_url }}"
+                     alt="{{ profile.name | default: site.name }}">
+              {% endif %}
+
+              <ul class="network-icon">
+                {% for link in profile.links %}
+                  {% if link.url and link.url != "" %}
+                    <li>
+                      <a href="{{ link.url }}" target="_blank" rel="noopener"
+                         aria-label="{{ link.label }}" title="{{ link.label }}">
+                        <i class="{{ link.icon }} big-icon" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+                {% if profile.email and profile.email != "" %}
+                  <li>
+                    <a href="mailto:{{ profile.email }}" aria-label="email" title="Email">
+                      <i class="fas fa-envelope big-icon" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="article-style">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= Publications ========================= -->
+    <section id="publications" class="home-section wg-pages">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-heading">
+            <h1>{{ page.publications_heading | default: "Selected publications" }}</h1>
+            {% if page.publications_subheading %}<p>{{ page.publications_subheading }}</p>{% endif %}
+          </div>
+
+          <div>
+            {% assign pubs = site.publications | sort: "date" | reverse %}
+            {% for post in pubs %}
+              {% include publication-card.html publication=post %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  {% include site-footer.html %}
+</body>
+</html>

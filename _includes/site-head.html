@@ -1,0 +1,56 @@
+{% assign profile = site.data.profile %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{% if page.title %}{% assign page_title = page.title | strip_html | strip_newlines | strip %}{% endif %}
+<title>{% if page.url == "/" %}{{ site.title }}{% else %}{{ page_title }} {{ site.title_separator | default: "-" }} {{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 300 }}">
+<meta name="author" content="{{ profile.name | default: site.name }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{% if page.url == "/" %}{{ site.title }}{% else %}{{ page_title }}{% endif %}">
+<meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 300 }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:type" content="{% if page.collection == 'publications' %}article{% else %}website{% endif %}">
+<meta name="twitter:card" content="summary">
+{% if site.author.twitter %}<meta name="twitter:creator" content="@{{ site.author.twitter }}">{% endif %}
+
+<!-- Favicons (existing assets) -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon-180x180.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16x16.png' | relative_url }}">
+<link rel="shortcut icon" href="{{ '/images/favicon.ico' | relative_url }}">
+
+<!-- Fonts: Montserrat for headings, Roboto for body, Roboto Mono for code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;400;700&family=Roboto+Mono&display=swap">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
+
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+<!-- Restore the saved theme before first paint to avoid a flash of the wrong theme -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var dark = saved === 'dark' || (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (dark) { document.documentElement.setAttribute('data-theme', 'dark'); }
+    } catch (e) { /* storage unavailable; fall back to light */ }
+  })();
+</script>
+
+<!-- MathJax: publication abstracts use inline TeX such as $Y \mid X$ -->
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+  };
+</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
