@@ -3,13 +3,17 @@ Link buttons for a publication. Any field left blank in the front matter is
 simply skipped, so it is safe to leave placeholders empty.
 Usage: {% include publication-links.html publication=post %}
 {%- endcomment -%}
+{%- comment -%}
+`pdf` and `paperurl` are independent: a "PDF" button appears only for an
+actual PDF, so a paper whose only link is a publisher landing page gets a
+"Link" button rather than a mislabeled "PDF".
+{%- endcomment -%}
 {%- assign pub = include.publication -%}
-{%- assign pdf = pub.pdf | default: pub.paperurl -%}
 <div class="btn-links">
-  {%- if pdf %}
-  <a class="btn btn-outline-primary" href="{{ pdf }}" target="_blank" rel="noopener">PDF</a>
+  {%- if pub.pdf %}
+  <a class="btn btn-outline-primary" href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>
   {%- endif -%}
-  {%- if pub.paperurl and pub.pdf %}
+  {%- if pub.paperurl %}
   <a class="btn btn-outline-primary" href="{{ pub.paperurl }}" target="_blank" rel="noopener">Link</a>
   {%- endif -%}
   {%- if pub.code %}
