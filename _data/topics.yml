@@ -4,6 +4,11 @@
 # Within a group, papers are ordered by their `topic_order` field (lowest
 # first); a paper with no `topic_order` falls to the end of its group.
 # A paper whose topic matches no group here still appears, under "Other".
+#
+# Each group is linkable from elsewhere on the page, e.g. [monitoring
+# work](#ai-monitoring). The anchor is the slug below; add an `anchor:` to a
+# group to use a different one without renaming the slug (which would mean
+# editing every paper's `topic:` too).
 groups:
   - slug: ai-control
     heading: "AI Control: Safety Constraints for AI Agents"

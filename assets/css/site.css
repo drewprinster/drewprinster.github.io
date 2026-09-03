@@ -468,6 +468,12 @@ img {
   margin-top: 2.75rem;
 }
 
+/* Jumped-to group: cue the heading, matching the card :target treatment */
+.pub-group:target > .pub-group-heading {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
 .pub-group-heading {
   font-size: 1.15rem;
   font-weight: 500;

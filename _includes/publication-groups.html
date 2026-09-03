@@ -18,7 +18,7 @@ paper from the page.
 {%- for group in site.data.topics.groups -%}
   {%- assign docs = site.publications | where: "topic", group.slug | sort: "topic_order", "last" -%}
   {%- if docs.size > 0 %}
-    <div class="pub-group">
+    <div class="pub-group" id="{{ group.anchor | default: group.slug }}">
       <h2 class="pub-group-heading">{{ group.heading }}</h2>
       {% for post in docs %}
         {% include publication-card.html publication=post %}
@@ -31,7 +31,7 @@ paper from the page.
 {%- assign grouped = by_date | where_exp: "p", "slug_list contains p.topic" -%}
 {%- assign ungrouped_count = by_date.size | minus: grouped.size -%}
 {%- if ungrouped_count > 0 %}
-  <div class="pub-group">
+  <div class="pub-group" id="other">
     <h2 class="pub-group-heading">Other</h2>
     {% for post in by_date %}
       {%- unless slug_list contains post.topic -%}
