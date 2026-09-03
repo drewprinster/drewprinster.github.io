@@ -6,7 +6,15 @@ renders full width, and a paper without keywords simply shows no tags.
 Usage: {% include publication-card.html publication=post %}
 {%- endcomment -%}
 {%- assign pub = include.publication -%}
-<div class="card-simple view-card">
+{%- comment -%}
+Each card carries an id, so prose elsewhere on the page can link straight
+to a paper -- e.g. [WATCH](#watch) from the About section. Set `anchor` in
+the paper's front matter for a short name; otherwise the permalink's last
+segment is used. html's scroll-padding-top keeps the fixed navbar from
+covering the card on arrival.
+{%- endcomment -%}
+{%- assign card_id = pub.anchor | default: pub.url | split: '/' | last -%}
+<div class="card-simple view-card" id="{{ card_id }}">
   <div class="card-layout">
     {%- if pub.thumbnail %}
     <a class="card-thumb" href="{{ pub.url | relative_url }}" tabindex="-1" aria-hidden="true">

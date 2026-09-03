@@ -21,6 +21,7 @@
   --title-fg: #151515;
   --section-bg: #fff;
   --thumb-bg: #fafafa;
+  --target-ring: rgba(21, 101, 192, 0.15);
   --distinction-fg: #8d5b00;
   --distinction-bg: #fff8e1;
   --distinction-border: #f0d38a;
@@ -46,6 +47,7 @@
   --title-fg: #fff;
   --section-bg: #1c1e26;
   --thumb-bg: #21232c;
+  --target-ring: rgba(144, 202, 249, 0.22);
   --distinction-fg: #ffcf5c;
   --distinction-bg: rgba(255, 207, 92, 0.12);
   --distinction-border: rgba(255, 207, 92, 0.35);
@@ -439,9 +441,9 @@ img {
   line-height: 1.65;
 }
 
-/* About prose at the same size as the author names on publication cards */
+/* About prose, two points above the 14px author-name size on cards */
 .wg-about .article-style {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .article-style p:first-child {
@@ -486,6 +488,12 @@ img {
 
 .card-simple:first-of-type {
   margin-top: 0;
+}
+
+/* Jumped-to card: a brief cue so a link's destination is obvious */
+.card-simple:target {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--target-ring);
 }
 
 /* Card body: optional thumbnail rail beside the text */

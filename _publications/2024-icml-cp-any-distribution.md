@@ -2,6 +2,7 @@
 title: "Conformal Validity Guarantees Exist for Any Data Distribution (and How to Find Them)"
 collection: publications
 permalink: /publication/2024-icml-cp-any-distribution
+anchor: cvg
 excerpt: 'Paper at ICML 2024. Demonstrates how conformal prediction can theoretically extend to *any* data distribution (i.e., not only exchangeable or quasi-exchangeable ones), with practical experiments focused on common settings of AI/ML agents including multiround synthetic protein design and active learning.'
 date: 2024-07-01  # only the year and month are displayed
 topic: uq-shift

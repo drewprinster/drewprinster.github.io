@@ -2,6 +2,7 @@
 title: "WATCH: Adaptive Monitoring for AI Deployments via Weighted-Conformal Martingales"
 collection: publications
 permalink: /publication/2025-icml-watch
+anchor: watch
 excerpt: 'Paper at ICML 2025. This paper develops a framework for the continual safety monitoring of AI deployments called "WATCH" (for Weighted Adaptive Testing for Changepoint Hypotheses). This framework is centered on a weighted generalization of conformal test martingales (WCTMs). WATCH addresses three main challenges in post-deployment AI monitoring: (1) Adaptation: WATCH enables monitoring under test-time adaptation to mild (covariate) shifts, to minimize unnecessary alarms. (2) Fast Detection: Empirically, WATCH rapidly detects more extreme or harmful shifts. (3) Root-Cause Analysis: WATCH aids in diagnosing the root-cause of performance degradation (as a covariate shift in $X$, or a concept shift in $Y \mid X$).'
 date: 2025-07-01  # only the year and month are displayed
 topic: ai-monitoring

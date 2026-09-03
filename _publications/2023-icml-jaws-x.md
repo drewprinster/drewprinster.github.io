@@ -2,6 +2,7 @@
 title: "JAWS-X: Addressing Efficiency Bottlenecks of Conformal Prediction Under Standard and Feedback Covariate Shift"
 collection: publications
 permalink: /publication/2023-icml-jaws-x
+anchor: jaws-x
 excerpt: 'Accepted for an Oral Presentation at ICML 2023 (top ~2% of submissions) and building on our previous "JAWS" framework (NeurIPS 2022), this paper presents JAWS-X, a collection of methods for efficiently estimating predictive confidence intervals for black-box predictors under standard and feedback covariate shift. Our JAWS-X methods achieve distribution-free, finite-sample guarantees while flexibly balancing statistical and computational efficiency.'
 date: 2023-07-01  # only the year and month are displayed
 topic: uq-shift
