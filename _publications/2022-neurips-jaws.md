@@ -7,6 +7,7 @@ date: 2022-11-01  # only the year and month are displayed
 topic: uq-shift
 topic_order: 3
 thumbnail: /images/publications/jaws_thumbnail.png
+figure: /images/publications/large/jaws_thumbnail.png
 keywords:
   - Conformal Prediction
   - Distribution Shift

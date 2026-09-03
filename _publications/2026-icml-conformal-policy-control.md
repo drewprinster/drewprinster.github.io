@@ -6,6 +6,7 @@ date: 2026-07-01  # only the year and month are displayed
 topic: ai-control
 topic_order: 1
 thumbnail: /images/publications/cpc_thumbnail.png
+figure: /images/publications/large/cpc_thumbnail.png
 keywords:
   - AI Agents
   - Risk Control

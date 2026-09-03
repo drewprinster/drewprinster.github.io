@@ -11,6 +11,27 @@ thumbnail_alt: 'Weighted conformal test martingale detecting a shift'   # option
 A paper with no `thumbnail` simply renders without one, so you can add
 these gradually.
 
+## Two sizes
+
+Each paper uses the same figure at two sizes:
+
+| Field | File | Where it appears | Display width |
+| --- | --- | --- | --- |
+| `thumbnail` | `<name>.png` | the publication card | 240px |
+| `figure` | `large/<name>.png` | the paper's own page | up to 560px |
+
+`figure` is optional and falls back to `thumbnail`. To regenerate the
+large version after replacing a figure:
+
+```sh
+sips -s format png --resampleWidth 1200 <name>.png --out large/<name>.png
+```
+
+Never resample *up* past the source width — it adds bytes, not detail.
+
+Full-size sources live in `_originals/`, which is ignored by git and, via
+its leading underscore, by Jekyll.
+
 ## Format
 
 Use **PNG** for figures, diagrams, and plots (lossless, crisp text), or

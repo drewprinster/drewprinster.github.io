@@ -22,6 +22,21 @@
         {% include publication-links.html publication=page %}
       </div>
 
+      {%- comment -%}
+      Larger version of the card thumbnail. Uses `figure` when present and
+      falls back to `thumbnail`, so a paper with only a thumbnail still
+      shows one here.
+      {%- endcomment -%}
+      {%- assign fig = page.figure | default: page.thumbnail -%}
+      {%- if fig %}
+      <div class="article-container">
+        <figure class="pub-figure">
+          <img src="{{ fig | relative_url }}"
+               alt="{{ page.thumbnail_alt | default: '' }}" loading="lazy">
+        </figure>
+      </div>
+      {%- endif %}
+
       <div class="article-container space-below">
         {% if page.pub_type %}
           <div class="pub-row">

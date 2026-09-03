@@ -34,7 +34,8 @@ Usage: {% include publication-card.html publication=post %}
       <ul class="tag-list">
         {%- for keyword in pub.keywords -%}
           {%- assign color = site.data.keywords[keyword] | default: "grey" -%}
-          <li class="tag tag--{{ color }}">{{ keyword }}</li>
+          {%- comment -%} escape_once: a keyword may contain an ampersand. {%- endcomment -%}
+          <li class="tag tag--{{ color }}">{{ keyword | escape_once }}</li>
         {%- endfor -%}
       </ul>
       {%- endif %}

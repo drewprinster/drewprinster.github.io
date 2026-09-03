@@ -6,10 +6,10 @@ date: 2025-12-01  # only the year and month are displayed
 topic: ai-monitoring
 topic_order: 2
 thumbnail: /images/publications/e-valuator_thumbnail.png
+figure: /images/publications/large/e-valuator_thumbnail.png
 keywords:
   - AI Agents
-  - Safety Monitoring
-  - Sequential Testing
+  - 'Monitoring & Sequential Testing'
   - Healthcare Application
 authors:
   - Shuvom Sadhuka

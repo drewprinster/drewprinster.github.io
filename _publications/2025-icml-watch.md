@@ -7,10 +7,10 @@ date: 2025-07-01  # only the year and month are displayed
 topic: ai-monitoring
 topic_order: 1
 thumbnail: /images/publications/watch_full_thumbnail.png
+figure: /images/publications/large/watch_full_thumbnail.png
 keywords:
-  - Safety Monitoring
+  - 'Monitoring & Sequential Testing'
   - Distribution Shift
-  - Sequential Testing
   - Conformal Prediction
 authors:
   - Drew Prinster

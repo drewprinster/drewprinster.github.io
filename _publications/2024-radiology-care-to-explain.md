@@ -6,6 +6,7 @@ date: 2024-11-01  # only the year and month are displayed
 topic: human-ai-teaming
 topic_order: 1
 thumbnail: /images/publications/CareToExplain_thumbnail.png
+figure: /images/publications/large/CareToExplain_thumbnail.png
 keywords:
   - Human-AI Interaction
   - Explainability/Interpretability

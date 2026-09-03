@@ -20,7 +20,7 @@ email: ""
 links:
   - label: "Google Scholar"
     icon: "ai ai-google-scholar"
-    url: "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C21&q=drew+prinster&btnG="
+    url: "https://scholar.google.com/citations?user=E3FLv78AAAAJ&hl=en&oi=ao"
   - label: "GitHub"
     icon: "fab fa-github"
     url: "https://github.com/drewprinster"

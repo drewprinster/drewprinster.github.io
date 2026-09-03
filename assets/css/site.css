@@ -486,7 +486,7 @@ img {
 /* Card body: optional thumbnail rail beside the text */
 .card-layout {
   display: flex;
-  gap: 1.15rem;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -519,7 +519,7 @@ img {
 
 @media (max-width: 600px) {
   .card-layout {
-    gap: 0.8rem;
+    gap: 1rem;
   }
 
   .card-thumb {
@@ -684,6 +684,24 @@ img {
   background-color: var(--primary);
   border-color: var(--primary);
   text-decoration: none;
+}
+
+/* Figure on a publication detail page: the card thumbnail, shown larger.
+   Sources are ~1200px wide, so 560px keeps roughly 2x pixel density. */
+.pub-figure {
+  margin: 1.6rem 0 0.4rem;
+  max-width: 560px;
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  background: var(--thumb-bg);
+  overflow: hidden;
+  padding: 0;
+}
+
+.pub-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* --------------------------------------------------------------------------

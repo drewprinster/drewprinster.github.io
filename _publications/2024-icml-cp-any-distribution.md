@@ -7,6 +7,7 @@ date: 2024-07-01  # only the year and month are displayed
 topic: uq-shift
 topic_order: 1
 thumbnail: /images/publications/ICML2024_CVG_thumbnail.png
+figure: /images/publications/large/ICML2024_CVG_thumbnail.png
 keywords:
   - Conformal Prediction
   - Distribution Shift
