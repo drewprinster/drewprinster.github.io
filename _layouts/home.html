@@ -31,7 +31,11 @@
                 {% for link in profile.links %}
                   {% if link.url and link.url != "" %}
                     <li>
-                      <a href="{{ link.url }}" target="_blank" rel="noopener"
+                      {%- comment -%}
+                      escape_once so a query string's & becomes &amp; in the
+                      attribute without double-escaping an already-escaped URL.
+                      {%- endcomment -%}
+                      <a href="{{ link.url | escape_once }}" target="_blank" rel="noopener"
                          aria-label="{{ link.label }}" title="{{ link.label }}">
                         <i class="{{ link.icon }} big-icon" aria-hidden="true"></i>
                       </a>
@@ -59,18 +63,16 @@
     </section>
 
     <!-- ========================= Publications ========================= -->
+    <!-- Heading above rather than in a left rail, so the cards get the
+         container's full width for their thumbnails and titles. -->
     <section id="publications" class="home-section wg-pages">
       <div class="container">
-        <div class="section-grid">
-          <div class="section-heading">
-            <h1>{{ page.publications_heading | default: "Selected publications" }}</h1>
-            {% if page.publications_subheading %}<p>{{ page.publications_subheading }}</p>{% endif %}
-          </div>
-
-          <div>
-            {% include publication-groups.html %}
-          </div>
+        <div class="section-heading section-heading--stacked">
+          <h1>{{ page.publications_heading | default: "Selected publications" }}</h1>
+          {% if page.publications_subheading %}<p>{{ page.publications_subheading }}</p>{% endif %}
         </div>
+
+        {% include publication-groups.html %}
       </div>
     </section>
   </div>

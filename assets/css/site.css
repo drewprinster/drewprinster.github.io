@@ -339,6 +339,15 @@ img {
   letter-spacing: 0.02em;
 }
 
+/* Publications heading sits above its cards rather than in a rail. */
+.section-heading--stacked {
+  margin-bottom: 1.9rem;
+}
+
+.section-heading--stacked h1 {
+  font-size: 1.5rem;
+}
+
 .section-heading p {
   font-weight: 400;
   font-size: 1.1rem;
@@ -789,6 +798,12 @@ img {
 
 .article-container.wide {
   max-width: 960px;
+}
+
+/* Matches .container, so the standalone list is as wide as the home section */
+.article-container.full {
+  max-width: 1140px;
+  padding: 0 15px;
 }
 
 .pub {

@@ -29,9 +29,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;400;700&family=Roboto+Mono&display=swap">
 
-<!-- Icons -->
+<!-- Icons. Academicons is self-hosted from assets/ (its fonts ship with the
+     repo) rather than pulled from a CDN, so the Google Scholar glyph cannot
+     break on a version that disappears upstream. -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
+<link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}">
 
 {%- comment -%}
 Named site.css, not style.css: the github-pages gem loads jekyll-theme-primer

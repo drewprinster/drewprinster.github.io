@@ -1,5 +1,5 @@
 ---
-title: "JAWS: Auditing Predictive Uncertainty Under Covariate Shift ([previously] Predictive Inference Under Covariate Shift)"
+title: "JAWS: Auditing Predictive Uncertainty Under Covariate Shift"
 collection: publications
 permalink: /publication/2022-neurips-jaws
 excerpt: 'JAWS is a collection of wrapper methods for distribution-free predictive inference when the common data exchangeability (e.g., i.i.d.) assumption is violated due to shifts in the input data distribution (standard covariate shifts). JAWS is based on our core method JAW--the JAckknife+ Weighted for standard covariate shift--and also includes computationally efficient Approximations of JAW (JAWA) using higher-order influence functions.'

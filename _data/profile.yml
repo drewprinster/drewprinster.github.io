@@ -20,7 +20,7 @@ email: ""
 links:
   - label: "Google Scholar"
     icon: "ai ai-google-scholar"
-    url: ""  # TODO: add your Google Scholar profile URL
+    url: "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C21&q=drew+prinster&btnG="
   - label: "GitHub"
     icon: "fab fa-github"
     url: "https://github.com/drewprinster"
