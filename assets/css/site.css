@@ -840,22 +840,22 @@ img {
   margin-top: 0;
 }
 
-.pub-row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.25rem;
-  margin-bottom: 1rem;
+/* Detail-page fields, centred to the figure's width so the figure and the
+   text below it line up as one column. To span the full container instead,
+   drop the max-width here. */
+.pub-fields {
+  max-width: 560px;
+  margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .pub-row {
-    grid-template-columns: 1fr 3fr;
-    gap: 1rem;
-  }
+/* One column: the label sits above its value rather than beside it. */
+.pub-row {
+  margin-bottom: 1.4rem;
 }
 
 .pub-row-heading {
   font-weight: 700;
+  margin-bottom: 0.2rem;
 }
 
 /* Body text as a field: same size as Citation, not the smaller prose size */

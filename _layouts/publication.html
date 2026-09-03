@@ -38,6 +38,11 @@
       {%- endif %}
 
       <div class="article-container space-below">
+        {%- comment -%}
+        Fields share the figure's width and centring, so the figure and the
+        text below it read as one aligned column.
+        {%- endcomment -%}
+        <div class="pub-fields">
         {% if page.citation %}
           <div class="pub-row">
             <div class="pub-row-heading">Citation</div>
@@ -57,6 +62,7 @@
             <div class="pub-summary">{{ content }}</div>
           </div>
         {%- endif %}
+        </div>
       </div>
     </div>
   </div>
