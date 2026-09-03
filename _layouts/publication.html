@@ -43,17 +43,15 @@
         text below it read as one aligned column.
         {%- endcomment -%}
         <div class="pub-fields">
-        {% if page.citation %}
-          <div class="pub-row">
-            <div class="pub-row-heading">Citation</div>
-            <div>{{ page.citation }}</div>
-          </div>
-        {% endif %}
+        {%- comment -%}
+        Citation is intentionally not shown here: the BibTeX button above
+        covers it in copy-pasteable form.
+        {%- endcomment -%}
 
         {%- comment -%}
-        The page body, presented as a labelled field alongside Citation and
-        at the same size, rather than as smaller trailing prose. Skipped
-        when a paper has no body text.
+        The page body, presented as a labelled field at the same size as
+        the rest of the page, rather than as smaller trailing prose.
+        Skipped when a paper has no body text.
         {%- endcomment -%}
         {%- assign summary = content | strip -%}
         {%- if summary != '' %}
