@@ -19,7 +19,7 @@
 "Monitoring & Sequential Testing": green
 "Risk Control": rose
 "Human-AI Interaction": orange
-"Explainability/Interpretability": cyan
+"Explainability/Interpretability": indigo
 
 # Application domains: deliberately both grey, so they read as a quieter
 # second category and do not add to the color load.
