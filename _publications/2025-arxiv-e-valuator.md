@@ -36,4 +36,4 @@ bibtex: |
     url = {https://arxiv.org/abs/2512.03109}
   }
 ---
-Converts verifier scores into decision rules with statistical guarantees by framing trajectory evaluation as a sequential hypothesis testing problem over e-processes, which enables continuous monitoring of agent actions. Improves false alarm control and statistical power across several datasets while allowing early termination of unsuccessful trajectories to conserve computation.
+Converts agent verifier (e.g., LLM judge) scores into decision rules with statistical guarantees by framing trajectory evaluation as a sequential hypothesis testing problem, which enables continuous monitoring of agent action trajectories. Improves false alarm control and detection power while allowing early termination of unsuccessful trajectories to conserve computation.

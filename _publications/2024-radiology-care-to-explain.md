@@ -40,4 +40,4 @@ bibtex: |
     url = {https://pubs.rsna.org/doi/abs/10.1148/radiol.233261}
   }
 ---
-A reader study with physicians examining how different types of AI explanation—local (feature-based) versus global (prototype-based)—affect chest radiograph diagnostic performance and trust in AI advice. Compared with global explanations, local explanations yielded better diagnostic accuracy when the AI advice was correct, and improved diagnostic efficiency overall by reducing time spent considering AI advice.
+In this multisite prospective study of simulated artificial intelligence (AI)–assisted chest radiograph diagnosis involving 220 physicians, AI explanation type (local vs global) differentially impacted physician diagnostic performance and trust in AI advice, even if physicians were not aware of these effects. 
