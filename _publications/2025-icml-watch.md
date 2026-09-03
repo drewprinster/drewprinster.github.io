@@ -12,6 +12,7 @@ keywords:
   - 'Monitoring & Sequential Testing'
   - Distribution Shift
   - Conformal Prediction
+  - Healthcare Application
 authors:
   - Drew Prinster
   - Xing Han

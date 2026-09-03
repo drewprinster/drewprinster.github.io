@@ -38,20 +38,6 @@
       {%- endif %}
 
       <div class="article-container space-below">
-        {% if page.pub_type %}
-          <div class="pub-row">
-            <div class="pub-row-heading">Type</div>
-            <div>{{ page.pub_type }}{% if page.distinction %} ({{ page.distinction | downcase }}){% endif %}</div>
-          </div>
-        {% endif %}
-
-        {% if page.venue %}
-          <div class="pub-row">
-            <div class="pub-row-heading">Publication</div>
-            <div>{{ page.venue }}</div>
-          </div>
-        {% endif %}
-
         {% if page.citation %}
           <div class="pub-row">
             <div class="pub-row-heading">Citation</div>
@@ -59,9 +45,18 @@
           </div>
         {% endif %}
 
-        <div class="article-style">
-          {{ content }}
-        </div>
+        {%- comment -%}
+        The page body, presented as a labelled field alongside Citation and
+        at the same size, rather than as smaller trailing prose. Skipped
+        when a paper has no body text.
+        {%- endcomment -%}
+        {%- assign summary = content | strip -%}
+        {%- if summary != '' %}
+          <div class="pub-row">
+            <div class="pub-row-heading">Informal Summary</div>
+            <div class="pub-summary">{{ content }}</div>
+          </div>
+        {%- endif %}
       </div>
     </div>
   </div>
