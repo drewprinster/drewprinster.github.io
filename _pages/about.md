@@ -9,11 +9,11 @@ redirect_from:
   - /contact/
   - /contact.html
 ---
-Hi, I'm Drew. I'm currently a PhD student in computer science at Johns Hopkins University. My research aim is to improve the safety, reliability, and regulatability of AI and machine learning systems in consequential settings, especially healthcare and bioscience. To these ends, I mainly develop statistical tools (e.g., related to conformal prediction and hypothesis testing) for the design of trustworthy AI systems or safeguards. For instance, I work on:
-- **[AI Control:](#ai-control)** - Methods to ensure that AI agents provably respect our declared safety constraints.
-- **[AI Monitoring:](#ai-monitoring)** - Continual monitoring, safety testing, and root-cause analysis of deployed AI systems.
-- **[Uncertainty Quantification](#uq-shift)** - Trustworthy predictive inference under distribution shift.
-- **[Human-AI Teaming](#human-ai-teaming)** - Human-centered design for clinical decision-making.
+Hi, I'm Drew. I'm a PhD student in computer science at Johns Hopkins University. My research aim is to improve the safety, reliability, and regulatability of AI and machine learning in consequential settings, especially healthcare and bioscience. To these ends, I mainly develop statistical tools (e.g., related to conformal prediction and hypothesis testing) for the design of trustworthy AI systems, safeguards, or auditing tools. For instance, I work on:
+- **[AI Control:](#ai-control)** Methods to ensure that AI agents provably respect our declared safety constraints.
+- **[AI Monitoring:](#ai-monitoring)** Continual monitoring, safety testing, and root-cause analysis of deployed AI systems.
+- **[Uncertainty Quantification:](#uq-shift)** Trustworthy predictive inference under distribution shift.
+- **[Human-AI Teaming:](#human-ai-teaming)** Human-centered design for clinical decision-making.
 
 I am advised by [Professor Suchi Saria](https://suchisaria.jhu.edu/) and [Professor Anqi Liu](https://anqiliu-ai.github.io/). In 2025, I interned with [Prescient Design](https://www.gene.com/scientists/our-scientists/prescient-design) at Genentech, where I began developing [conformal policy control](#cpc). I have also worked closely with [Professor Chien-Ming Huang](https://www.cs.jhu.edu/~cmhuang/).
 
